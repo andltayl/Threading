@@ -32,7 +32,7 @@ namespace Threading
                 x = r.NextDouble();
                 y = r.NextDouble();
 
-                if((x*x + y*y) <= 1)
+                if((x*x + y*y) <= 1)            // Determine if the dart landed inside the circle
                 {
                     goodDarts++;
                 }

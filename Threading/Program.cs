@@ -28,13 +28,13 @@ namespace Threading
 
                 darts.Add(temp);
                 threads.Add(new Thread(new ThreadStart(darts[i].throwDarts)));
-                threads[i].Start();
-                Thread.Sleep(16);
+                threads[i].Start();     // Start each thread
+                Thread.Sleep(16);       // Sleep main so the random numbers will have a different seed
             }
 
             for(int i = 0; i < numThreads; i++)
             {
-                threads[i].Join();
+                threads[i].Join();      // Wait for all threads to finish
             }
 
             for(int i = 0; i < numThreads; i++)
